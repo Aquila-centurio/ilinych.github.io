@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Подключаем Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
+  </head>
+
+  <body>
+    <div class="main-container">
+      <!-- Первый блок. Текст, лого, телефон-->
+      <div class="background1">
+        <div class="container top">
+          <div class="text-and-logo">
+            <img src="./img/logo.png" alt="logo" />
+
+            <h2 class="animate__animated animate__jello">
+              С помощью нас <br />вы сможете создать то, о чем
+            </h2>
+
+            <h1 class="animate-header">желаете!</h1>
+
+            <p>
+              Наша команда поможет Вам достичь <br />
+              огромного успеха. Мы верим в вас! И знаем это на <br />
+              все 100%. Вас не остановить!
+            </p>
+
+            <button
+              class="animate__animated animate__heartBeat animate__slower"
+            >
+              Узнать больше...
+            </button>
+          </div>
+
+          <div class="phone">
+            <img
+              class="animate-phone"
+              src="./img/header-img.png"
+              alt="Phone Image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Услуги -->
+      <div class="background2">
+        <div class="container second_part">
+          <h2 class="transition-header">Что Вам необходимо?</h2>
+          <div class="blocks">
+            <div class="universal_block">
+              <img
+                class="transition-image"
+                src="./img/f3.png"
+                alt="Первый блок"
+              />
+              <h3>Первый блок</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur<br />adipiscing elit.
+              </p>
+            </div>
+            <div class="universal_block">
+              <img
+                class="transition-image"
+                src="./img/f4.png"
+                alt="Второй блок"
+              />
+              <h3>Второй блок</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur<br />adipiscing elit.
+              </p>
+            </div>
+            <div class="universal_block">
+              <img
+                class="transition-image"
+                src="./img/f5.png"
+                alt="Третий блок"
+              />
+              <h3>Третий блок</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur<br />adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Заявка -->
+      <div class="zakaz">
+        <div class="container">
+          <h2>Форма заказа обратного звонка</h2>
+          <form action="#" method="post">
+            <input type="text" name="name" placeholder="Имя" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Электронная почта"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Телефон"
+              pattern="^\+?[0-9\s\-\(\)]+$"
+              title="Введите корректный номер телефона"
+              required
+            />
+            <textarea
+              name="topic"
+              placeholder="Какая тема Вас интересует?"
+              required
+            ></textarea>
+            <button type="submit">Отправить вопрос!</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Заказ -->
+      <div class="zakaz">
+        <div class="container">
+          <h2>Форма заказа продукта или услуги</h2>
+          <form id="productOrderForm" action="#" method="post">
+            <input
+              id="firstName"
+              name="first-name"
+              placeholder="Имя"
+            />
+            <input
+              id="lastName"
+              name="last-name"
+              placeholder="Фамилия"
+            />
+            <input
+              id="phone"
+              name="phone"
+              placeholder="Телефон"
+            />
+            <input
+              id="email"
+              name="email"
+              placeholder="Электронная почта"
+            />
+            <input
+              id="quantity"
+              type="number"
+              name="quantity"
+              placeholder="Количество"
+            />
+      
+            <select id="paymentMethod" name="payment-method">
+              <option value="">Выберите способ оплаты</option>
+              <option value="card">Карта</option>
+              <option value="transfer">Перевод</option>
+              <option value="cash">При получении</option>
+            </select>
+      
+            <button type="submit">Отправить заказ</button>
+            <div id="errorMessages" style="color: red; margin-top: 10px"></div>
+          </form>
+        </div>
+      </div>
+      
+
+      <!-- Подвал -->
+      <footer>
+        <div class="background3"></div>
+        <p>© Все на этом сайте защищено</p>
+        <div class="background4"></div>
+      </footer>
+      <script src="js/main.js"></script> 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; /* Добавляем внутренние отступы */
+}
+
+/* Первый блок: Текст, лого, телефон */
+.background1 {
+  background: linear-gradient(0deg, #3a7edd, #d9e9ff);
+  padding: 50px 0;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.text-and-logo {
+  flex: 1;
+  margin-right: 46px;
+  color: #fff;
+}
+
+.text-and-logo img {
+  margin-bottom: 20px;
+}
+
+.text-and-logo h1 {
+  font-size: 52px;
+  color: #f5f7f8;
+  margin-bottom: 20px;
+}
+
+.text-and-logo h2 {
+  font-size: 46px;
+  color: #f5f7f8;
+  margin-bottom: 10px;
+}
+
+.text-and-logo p {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #f8f4f4;
+}
+
+.text-and-logo button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.phone img {
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+}
+
+/* Второй блок: Услуги */
+.background2 {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+}
+
+.second_part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.second_part h2 {
+  font-size: 46px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.universal_block {
+  flex: 1;
+  text-align: center;
+}
+
+.universal_block img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.universal_block h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.universal_block p {
+  color: #666;
+}
+
+/* Третий блок: Форма заявки */
+.zakaz {
+  background-color: #ebf9fc;
+  padding: 50px;
+  text-align: center;
+}
+
+.zakaz h2 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Четвёртый блок: Подвал */
+footer {
+  text-align: center;
+  position: relative;
+}
+
+.background3 {
+  background: linear-gradient(180deg, #19498d, #5b98ec);
+  height: 100px;
+  width: 100%;
+  margin: 0;
+}
+
+.background4 {
+  background: linear-gradient(180deg, #4b8be6, #95baee);
+  height: 100px;
+  width: 100%;
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*------------------------------------ Анимация keyFrames--------------------------------------------------*/
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-phone {
+  animation: pulse 2s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-header {
+  animation: slideUp 3s; /* Плавная анимация с циклом */
+}
+
+/*--------------------------------Анимация transition--------------------------*/
+
+.transition-image {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.transition-image:hover {
+  transform: scale(1.1);
+  filter: brightness(0.9);
+}
+
+.transition-header {
+  transition: transform 0.3s ease;
+}
+
+.transition-header:hover {
+  transform: translateY(-5px);
+}
+
+
+/*------------------------------------ Адаптация ------------------------------*/
+
+/* От 992px до 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 960px;
+  }
+
+  .top {
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .text-and-logo {
+    flex: 2; 
+  }
+
+  .text-and-logo h1, .text-and-logo h2 {
+    font-size: 28px;
+  }
+
+  .text-and-logo p {
+    font-size: 16px;
+  }
+
+  .phone {
+    flex: 1; 
+  }
+
+  .phone img {
+    width: 100%; 
+    max-width: 450px; 
+  }
+
+  .second_part h2 {
+    font-size: 28px;
+  }
+
+  .universal_block img {
+    max-width: 80px;
+  }
+
+  .universal_block h3 {
+    font-size: 20px;
+  }
+
+  .zakaz h2 {
+    font-size: 28px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+  }
+}
+
+
+/* От 768px до 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .top {
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .text-and-logo {
+    margin-right: 0;
+    text-align: left; 
+    padding: 0 20px;
+  }
+
+  .phone {
+    margin-left: auto; 
+  }
+
+  .phone img {
+    width: 100%; 
+    max-width: 300px; 
+  }
+
+  .text-and-logo button {
+    padding: 20px 45px;
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .blocks {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px; 
+  }
+
+  .universal_block {
+    margin-bottom: 20px;
+  }
+
+  .text-and-logo h1, .text-and-logo h2 {
+    font-size: 28px;
+  }
+
+  .text-and-logo p {
+    font-size: 16px;
+  }
+
+  .second_part h2 {
+    font-size: 28px;
+  }
+
+  .universal_block h3 {
+    font-size: 18px;
+  }
+
+  
+  .zakaz h2 {
+    font-size: 28px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 16px;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    max-width: 50%;
+  }
+}
